@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom';
 
 import NavBar from './components/navbar';
 import Products from './components/products';
@@ -13,6 +14,12 @@ class App extends Component {
     return (
       <div>
         <NavBar />
+        <div className="content">
+          <Route path="/" component={Home} />
+          <Route path="/admin" component={Dashboard} />
+          <Route path="/products" component={Products} />
+          <Route path="/posts" component={Posts} />
+        </div>
       </div>
     );
   }
